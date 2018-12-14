@@ -15,7 +15,8 @@ while answered == False:
         print ("2) Red")
         print ("3) Green")
         print ("4) Yellow")
-        answer = int (input (""))
+        answer = int (input ("Your answer: "))
+        print ("")
         if answer == 2:
             print ("That is correct!")
             answered = True
@@ -25,5 +26,8 @@ while answered == False:
         else:
             print ("That was not one of the options. Please input a positive")
             print ("integer from 1 to 4.")
+            print ("")
     except ValueError:
+        print ("")
         print ("That's not even a number!")
+        print ("")
