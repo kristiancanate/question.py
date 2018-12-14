@@ -10,19 +10,20 @@ input ("")
 
 while answered == False:
     try:
-        print ("QUESTION")
-        print ("OPTION 1")
-        print ("OPTION 2")
-        print ("OPTION 3")
-        print ("OPTION 4")
+        print ("Which of the following is my favorite color?")
+        print ("1) Blue")
+        print ("2) Red")
+        print ("3) Green")
+        print ("4) Yellow")
         answer = int (input (""))
         if answer == 2:
-            print ("You are correct!")
+            print ("That is correct!")
             answered = True
         elif 0 < answer < 5:
-            print ("You are wrong.")
+            print ("That is incorrect :(")
             answered = True
         else:
-            print ("ERROR")
+            print ("That was not one of the options. Please input a positive")
+            print ("integer from 1 to 4.")
     except ValueError:
-        print ("ERROR")
+        print ("That's not even a number!")
