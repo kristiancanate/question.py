@@ -1,5 +1,6 @@
 answered = False
 answer = int (0)
+score = int (0)
 
 print ("Hello, and welcome to my one question quiz.")
 print ("In this program, you will be asked one question and given four options")
@@ -18,10 +19,9 @@ while answered == False:
         answer = int (input ("Your answer: "))
         print ("")
         if answer == 2:
-            print ("That is correct!")
+            score += 1
             answered = True
         elif 0 < answer < 5:
-            print ("That is incorrect :(")
             answered = True
         else:
             print ("That was not one of the options. Please input a positive")
@@ -29,5 +29,10 @@ while answered == False:
             print ("")
     except ValueError:
         print ("")
-        print ("That's not even a number!")
+        print ("That's not even an integer!")
         print ("")
+
+if score == 1:
+    print ("That is correct!")
+elif score == 0:
+    print ("That is incorrect :(")
