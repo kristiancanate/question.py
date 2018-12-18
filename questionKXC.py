@@ -32,7 +32,4 @@ while answered == False:
         print ("That's not even an integer!")
         print ("")
 
-if score == 1:
-    print ("That is correct!")
-elif score == 0:
-    print ("That is incorrect :(")
+print ("You got", score*100, "% out of 100%.")
